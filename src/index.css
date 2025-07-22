@@ -8,35 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Italian pasta bar color palette */
+    --background: 43 74% 97%;
+    --foreground: 20 14% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 20 14% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 20 14% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Italian red (tomato) */
+    --primary: 9 100% 58%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Italian green (basil) */
+    --secondary: 140 55% 45%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Warm cream */
+    --muted: 43 74% 95%;
+    --muted-foreground: 20 14% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Golden parmesan */
+    --accent: 43 100% 68%;
+    --accent-foreground: 20 14% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Paprika orange */
+    --destructive: 24 100% 58%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 43 30% 88%;
+    --input: 43 30% 88%;
+    --ring: 9 100% 58%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom pasta colors */
+    --tomato: 9 100% 58%;
+    --basil: 140 55% 45%;
+    --cream: 43 74% 97%;
+    --parmesan: 43 100% 68%;
+    --paprika: 24 100% 58%;
+    --mozzarella: 0 0% 98%;
+    
+    /* Gradients */
+    --gradient-italian: linear-gradient(135deg, hsl(var(--tomato)), hsl(var(--paprika)));
+    --gradient-pasta: linear-gradient(135deg, hsl(var(--parmesan)), hsl(var(--cream)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--tomato) / 0.9), hsl(var(--basil) / 0.8));
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +120,43 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom animations for pasta site */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 3s infinite;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hover effects */
+  .hover-scale {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--tomato)), hsl(var(--paprika)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

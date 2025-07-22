@@ -61,7 +61,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				/* Custom pasta colors */
+				tomato: 'hsl(var(--tomato))',
+				basil: 'hsl(var(--basil))',
+				cream: 'hsl(var(--cream))',
+				parmesan: 'hsl(var(--parmesan))',
+				paprika: 'hsl(var(--paprika))',
+				mozzarella: 'hsl(var(--mozzarella))'
+			},
+			backgroundImage: {
+				'gradient-italian': 'var(--gradient-italian)',
+				'gradient-pasta': 'var(--gradient-pasta)',
+				'gradient-hero': 'var(--gradient-hero)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
