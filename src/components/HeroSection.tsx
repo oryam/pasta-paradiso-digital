@@ -12,6 +12,7 @@ const HeroSection = () => {
           muted
           loop
           playsInline
+          disablepictureinpicture
           title="Italian Pasta Video Background"
         />
         <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
@@ -45,7 +46,7 @@ const HeroSection = () => {
           <Button 
             variant="outline" 
             size="lg"
-            className="border-2 border-mozzarella text-mozzarella hover:bg-mozzarella hover:text-tomato font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:scale-105 transition-all duration-300"
+            className="border-2 border-mozzarella text-tomato hover:bg-mozzarella hover:text-tomato font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:scale-105 transition-all duration-300"
           >
             Personnaliser mon Plat
           </Button>
