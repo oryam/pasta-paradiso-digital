@@ -5,13 +5,14 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <iframe
+        <video
           className="w-full h-full object-cover"
-          src="https://www.youtube.com/embed/TUoJc81oXP4?autoplay=1&mute=1&loop=1&playlist=TUoJc81oXP4&controls=0&showinfo=0&rel=0"
+          src="/src/assets/home.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
           title="Italian Pasta Video Background"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
         />
         <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
       </div>
