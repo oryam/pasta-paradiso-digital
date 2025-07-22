@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import homeVideo from "@/assets/home.mp4";
 
 const HeroSection = () => {
   return (
@@ -7,7 +8,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <video
           className="w-full h-full object-cover"
-          src="/src/assets/home.mp4"
+          src={homeVideo}
           autoPlay
           muted
           loop
