@@ -13,7 +13,7 @@ const HeroSection = () => {
           muted
           loop
           playsInline
-          disablepictureinpicture
+          disablePictureInPicture
           title="Italian Pasta Video Background"
         />
         <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
